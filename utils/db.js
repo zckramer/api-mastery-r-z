@@ -5,7 +5,7 @@ const RecipeController = require("../controllers/recipe-controller")
 
 mongoose.connect(
   // Richard's DB
-  "mongodb+srv://admin:admin@cluster007-rekop.mongodb.net/cocktails-db?retryWrites=true&w=majority",
+  "mongodb+srv://username:assword@cluster007-rekop.mongodb.net/cocktails-db?retryWrites=true&w=majority",
 
   // Zack's DB
 // "mongodb+srv://admin:passwordpassword@calico-host-khzco.mongodb.net/goddamnit?retryWrites=true&w=majority",  
