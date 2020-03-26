@@ -2,8 +2,8 @@
 const RecipeModel = require("../models/recipe-model");
 
 module.exports = {
-  add(name, image, callback) {
-    const newRecipe = new RecipeModel({name, image});
+  add(name, image, description, ingredients, instructions, callback) {
+    const newRecipe = new RecipeModel({name, image, description, ingredients, instructions});
     newRecipe.save().then(callback);
   },
   delete(recipeId, callback) {

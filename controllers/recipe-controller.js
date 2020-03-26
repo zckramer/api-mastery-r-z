@@ -4,10 +4,10 @@ module.exports = {
   
   addNewRecipe(req, res) {
 
-    const { name, image } = req.body;
+    const { name, image, description, ingredients, instructions } = req.body;
 
-    RecipeService.add(name, image, response => {
-      console.log("waiting for promise...")
+    RecipeService.add(name, image, description, ingredients, instructions, response => {
+      console.log("RecipeService.Add: waiting for promise...")
       res.json({ response });
     })
   },

@@ -1,14 +1,5 @@
 const mongoose = require("mongoose");
 
-// const Recipe = mongoose.model(
-//     "Recipe",
-//     new mongoose.Schema({
-//         name: String,
-//         image: String
-//     })
-// )
-
-
 const Recipe = new mongoose.Schema({
     name: {
         type: String,
@@ -17,7 +8,20 @@ const Recipe = new mongoose.Schema({
     
     image: {
         type: String
+    },
+
+    description: {
+        type: String
+    },
+
+    ingredients: {
+        type: [String]
+    },
+
+    instructions: {
+        type: String
     }
+
     
 });
     module.exports = mongoose.model('Recipe', Recipe);
