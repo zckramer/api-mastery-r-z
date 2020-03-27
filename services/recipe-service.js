@@ -7,7 +7,7 @@ module.exports = {
     newRecipe.save().then(callback);
   },
   delete(recipeId, callback) {
-    RecipeModel.deleteOne(recipeId).then(callback);
+    RecipeModel.findByIdAndDelete(recipeId).then(callback);
   },
   findAll(callback) {
     RecipeModel.find().then(callback);

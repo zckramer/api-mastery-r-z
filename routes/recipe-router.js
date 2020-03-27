@@ -11,6 +11,6 @@ router.patch('/:id', recipeController.updateRecipe);
 
 router.post('/recipes', recipeController.addNewRecipe);
 
-router.delete('/', recipeController.deleteRecipe);
+router.delete('/recipes/:id', recipeController.deleteRecipe);
 
 module.exports = router;

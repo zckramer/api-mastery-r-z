@@ -14,7 +14,7 @@ module.exports = {
 
   deleteRecipe(req, res) {
 
-    const recipeId = req.body;
+    const recipeId = req.params.id;
 
     RecipeService.delete(recipeId, response => {
       res.json({ response })
